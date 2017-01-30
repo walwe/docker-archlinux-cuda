@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  archlinux-cuda:
+    build: .
+    image: walwe/archlinux-cuda:latest
+    devices:
+      - "/dev/nvidia0:/dev/nvidia0"
+      - "/dev/nvidiactl:/dev/nvidiactl"
+      - "/dev/nvidia-uvm:/dev/nvidia-uvm"
