@@ -8,7 +8,7 @@ DOCKER_FILE=Dockerfile
 default: build
 
 build:
-    docker build --tag ${DOCKER_REGISTRY}/${NAMESPACE}:${VERSION} -f ${DOCKER_FILE} .
+    docker build --rm --tag ${DOCKER_REGISTRY}/${NAMESPACE}:${VERSION} -f ${DOCKER_FILE} .
 
 force-build:
     docker build --no-cache --tag ${DOCKER_REGISTRY}/${NAMESPACE}:${VERSION} -f ${DOCKER_FILE} .
